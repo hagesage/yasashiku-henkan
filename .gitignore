@@ -1,0 +1,7 @@
+# secrets
+.env
+.env.*
+*.env
+
+# node
+node_modules
