@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文章やさしく変換くん</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>文章やさしく変換くん｜難しい文章を中学生でもわかる日本語に</h1>
+
+      <p>
+        文章やさしく変換くんは、<br>
+        難しくて読みづらい日本語の文章を、中学生でも理解できる、やさしい表現に変換する無料Webツールです。
+      </p>
+      <p>
+        仕事の文章、公的な文書、説明文などを、<br>
+        専門用語を減らし、短く・わかりやすい日本語に整えます。<br>
+        文章を書くのが苦手な方でも、入力するだけで簡単に使えます。
+      </p>
+
+      <div class="usage-guide">
+        <h2>こんなときに使えます</h2>
+        <ul>
+          <li>仕事で書いた文章が、堅すぎる・わかりにくいと感じたとき</li>
+          <li>公的文書やお知らせ文を、誰にでも伝わる日本語にしたいとき</li>
+          <li>専門用語が多い文章を、中学生でも理解できる表現に直したいとき</li>
+          <li>メールや説明文を、やさしく丁寧な言い回しに整えたいとき</li>
+          <li>自分で書いた文章が、読み手に伝わっているか不安なとき</li>
+          <li>長くて難しい文章を、短く・読みやすく言い換えたいとき</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <label for="inputText">変換したい文章</label>
+        <textarea id="inputText" placeholder="ここに難しい文章を入力してください...&#10;例：本案件につきましては、鋭意検討中でございます。"></textarea>
+      </section>
+
+      <div class="actions">
+        <button id="transformBtn" type="button">
+          <span class="icon">✨</span> やさしく変換する
+        </button>
+      </div>
+
+      <section class="output-section">
+        <label for="outputText">やさしくなった文章</label>
+        <div id="outputContainer" class="output-container">
+          <p id="placeholderText" class="placeholder">ここに結果が表示されます</p>
+          <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <span>変換中...</span>
+          </div>
+          <div id="resultText" class="result-text hidden"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by Gemini ✦ Simple AI Tool</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
